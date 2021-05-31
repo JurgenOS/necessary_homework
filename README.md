@@ -3,7 +3,7 @@
 Первое обязательное ДЗ по курсу "JAVA Разработчик" от Сбербанка.
 
 Для того, чтобы проверять было проще, вот схема комнат:
-![Image of Scheme](https://github.com/JurgenOS/sber_java_necessary_hw_1/blob/main/Scheme.png)
+![Image of Scheme](https://github.com/JurgenOS/sber_java_necessary_hw_1/blob/master/Scheme.png)
 
 Игра начинается с приветственного сообщения, указания локации и координат в текущей локации.
 
