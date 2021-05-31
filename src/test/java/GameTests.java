@@ -1,16 +1,12 @@
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
-import sun.misc.IOUtils;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
-
+import org.junit.contrib.java.lang.system.SystemOutRule;
 
 public class GameTests {
 
+    @Rule
+    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Test
     public void runTest(){
@@ -163,6 +159,11 @@ public class GameTests {
             }
             g.handleCommand(s);
         }
+
+        String t = systemOutRule.getLogWithNormalizedLineSeparator().trim();
+        String c = CorrectOutput.output.toString();
+
+        Assert.assertEquals(c, t);
     }
 }
 
